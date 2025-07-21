@@ -11,7 +11,7 @@ model = InferenceClientModel(model_id="Qwen/Qwen2.5-Coder-32B-Instruct")
 agent = CodeAgent(tools=[image_generation_tool], model=model)
 
 result = agent.run(
-    "Improve this prompt, describe the texture, lens type, light conditions, visual style, then generate an image of it.", additional_args={'user_prompt': 'Brutalist building in the middle of Prague'}
+    "Improve this prompt, then generate an image of it.", additional_args={'user_prompt': 'Brutalist building in the middle of Prague'}
 )
 
 print(result)

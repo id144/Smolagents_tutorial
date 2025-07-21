@@ -1,9 +1,8 @@
 from smolagents import CodeAgent, InferenceClientModel
 import os
-model_id = "meta-llama/Llama-3.3-70B-Instruct"
+model_id = "Qwen/Qwen2.5-Coder-14B-Instruct"
 
-api_key = os.environ["HF_API_KEY"] 
-model = InferenceClientModel()
+model = InferenceClientModel(model_id=model_id)
 agent = CodeAgent(tools=[], model=model, add_base_tools=True)
 
 result = agent.run(

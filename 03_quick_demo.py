@@ -1,8 +1,3 @@
-from huggingface_hub import login
-import os
-api_key = os.environ["HF_API_KEY"] 
-login(token=api_key)
-
 from smolagents import CodeAgent, WebSearchTool, InferenceClientModel
 
 model = InferenceClientModel()
